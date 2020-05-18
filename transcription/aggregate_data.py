@@ -11,7 +11,7 @@ feeds = [POD_SAVE_AMERICA_RSS]
 for feed in feeds:
     i = 1  # Counter for file naming
     parsed_feed = feedparser.parse(feed)
-    # First 100 episodes that appear
+    # First 50 episodes that appear
     for entry in parsed_feed['entries'][:50]:
         episode_url = entry['links'][0]['href']
         TEMP_FILE = "temp.mp3"
